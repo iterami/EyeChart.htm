@@ -3,7 +3,7 @@
 function randomize(){
     let chart = '';
     let fontsize = core_storage_data['fontsize'];
-    const letters = ['W', 'E', 'M', '3'];
+    const letters = ['W', 'E', 'M', 'Ǝ'];
 
     for(let row = 0; row < core_storage_data['rows']; row++){
         chart += '<div style="font-size:' + fontsize + 'px">';
