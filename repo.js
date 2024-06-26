@@ -39,8 +39,8 @@ function repo_init(){
       },
       'storage-menu': '<table><tr><td><input class=mini id=font-decrease step=any type=number><td>Font Decrease'
         + '<tr><td><input class=mini id=fontsize step=any type=number><td>Font Size'
-        + '<tr><td><input class=mini id=letters min=1 step=any type=number><td>Letters'
-        + '<tr><td><input class=mini id=rows min=1 step=any type=number><td>Rows</table>',
+        + '<tr><td><input class=mini id=letters min=1 step=1 type=number><td>Letters'
+        + '<tr><td><input class=mini id=rows min=1 step=1 type=number><td>Rows</table>',
       'title': 'EyeChart.htm',
       'ui-elements': [
         'chart',
