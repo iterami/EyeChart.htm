@@ -29,7 +29,6 @@ function repo_init(){
         },
       },
       'info': '<button id=randomize type=button>Randomize</button>',
-      'reset': randomize,
       'storage': {
         'font-decrease': .8,
         'fontsize': 150,
