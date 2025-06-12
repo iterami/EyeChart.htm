@@ -8,9 +8,7 @@ function randomize(){
         chart += '<div style="font-size:' + fontsize + 'px">';
 
         for(let letter = 0; letter < core_storage_data['letter-count']; letter++){
-            chart += core_storage_data['letters'][core_random_integer({
-              'max': core_storage_data['letters'].length,
-            })] + ' ';
+            chart += core_storage_data['letters'][core_random_integer(core_storage_data['letters'].length)] + ' ';
         }
 
         chart += '</div>';
