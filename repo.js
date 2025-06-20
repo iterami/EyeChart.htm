@@ -40,7 +40,7 @@ function repo_init(){
         + '<tr><td><input class=mini id=letters type=text><td>Letters'
         + '<tr><td><input class=mini id=rows min=1 step=1 type=number><td>Rows</table>',
       'title': 'EyeChart.htm',
-      'ui-elements': [
+      'ui_elements': [
         'chart',
       ],
     });
