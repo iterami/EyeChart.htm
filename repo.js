@@ -34,7 +34,7 @@ function repo_init(){
         'letters': 'WEMƎ',
         'rows': 20,
       },
-      'storage-menu': '<table><tr><td><input class=mini id=decrease step=any type=number><td>Font Decrease'
+      'storage_menu': '<table><tr><td><input class=mini id=decrease step=any type=number><td>Font Decrease'
         + '<tr><td><input class=mini id=fontsize step=any type=number><td>Font Size'
         + '<tr><td><input class=mini id=count min=1 step=1 type=number><td>Letter Count'
         + '<tr><td><input class=mini id=letters type=text><td>Letters'
