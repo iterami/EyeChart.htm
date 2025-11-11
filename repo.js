@@ -3,15 +3,18 @@
 function randomize(){
     let chart = '';
     let fontsize = core_storage_data.fontsize;
+    const min = globalThis.innerWidth / (core_storage_data.count + 1);
 
     for(let row = 0; row < core_storage_data.rows; row++){
-        chart += '<div style="font-size:' + fontsize + 'px">';
+        if(fontsize < min){
+            chart += '<div style="font-size:' + fontsize + 'px">';
 
-        for(let letter = 0; letter < core_storage_data.count; letter++){
-            chart += core_storage_data.letters[core_random_integer(core_storage_data.letters.length)] + ' ';
+            for(let letter = 0; letter < core_storage_data.count; letter++){
+                chart += core_storage_data.letters[core_random_integer(core_storage_data.letters.length)] + ' ';
+            }
+
+            chart += '</div>';
         }
-
-        chart += '</div>';
 
         fontsize *= core_storage_data.decrease;
     }
