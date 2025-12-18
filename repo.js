@@ -4,16 +4,14 @@ function randomize(){
     let chart = '';
     let fontsize = core_storage_data.fontsize;
     const min = globalThis.innerWidth / (core_storage_data.count + 1);
+    let line = 1;
 
     for(let row = 0; row < core_storage_data.rows; row++){
         if(fontsize < min){
-            chart += '<div style="font-size:' + fontsize + 'px">';
-
+            chart += '<tr><td class=big>' + line++ + '<td style="font-size:' + fontsize + 'px">';
             for(let letter = 0; letter < core_storage_data.count; letter++){
                 chart += core_storage_data.letters[core_random_integer(core_storage_data.letters.length)] + ' ';
             }
-
-            chart += '</div>';
         }
 
         fontsize *= core_storage_data.decrease;
