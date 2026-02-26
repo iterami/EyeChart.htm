@@ -27,7 +27,7 @@ function repo_init(){
           'onclick': randomize,
         },
       },
-      'info': '<button id=randomize type=button>Randomize</button>',
+      'info': '<button class=medium id=randomize type=button>Randomize</button>',
       'storage': {
         'count': 5,
         'decrease': .8,
