@@ -8,13 +8,13 @@ function randomize(){
 
     for(let row = 0; row < core_storage_data.rows; row++){
         if(fontsize < min){
-            chart += '<tr><td class=big>' + line++ + '<td style="font-size:' + fontsize + 'px">';
+            chart += '<tr><td class=big>' + line++ + '<td style="font-size:' + fontsize + 'rem">';
             for(let letter = 0; letter < core_storage_data.count; letter++){
                 chart += core_storage_data.letters[core_random_integer(core_storage_data.letters.length)] + ' ';
             }
         }
 
-        fontsize *= core_storage_data.decrease;
+        fontsize *= core_storage_data.multiplier;
     }
 
     core_elements.chart.innerHTML = chart;
@@ -30,13 +30,13 @@ function repo_init(){
       'info': '<button class=medium id=randomize type=button>Randomize</button>',
       'storage': {
         'count': 5,
-        'decrease': .8,
-        'fontsize': 150,
+        'fontsize': 10,
         'letters': 'WEMƎ',
+        'multiplier': .8,
         'rows': 20,
       },
-      'storage_menu': '<table><tr><td><input class=mini id=decrease step=any type=number><td>Font Decrease'
-        + '<tr><td><input class=mini id=fontsize step=any type=number><td>Font Size'
+      'storage_menu': '<table><tr><td><input class=mini id=multiplier step=any type=number><td>Font Size Multiplier'
+        + '<tr><td><input class=mini id=fontsize step=any type=number><td>Initial Font Size (rem)'
         + '<tr><td><input class=mini id=count min=1 step=1 type=number><td>Letter Count'
         + '<tr><td><input class=mini id=letters type=text><td>Letters'
         + '<tr><td><input class=mini id=rows min=1 step=1 type=number><td>Rows</table>',
