@@ -35,11 +35,10 @@ function repo_init(){
         'multiplier': .8,
         'rows': 20,
       },
-      'storage_menu': '<table><tr><td><input class=mini id=multiplier step=any type=number><td>Font Size Multiplier'
-        + '<tr><td><input class=mini id=fontsize step=any type=number><td>Initial Font Size (rem)'
-        + '<tr><td><input class=mini id=count min=1 step=1 type=number><td>Letter Count'
+      'storage_menu': '<table><tr><td><input class=mini id=fontsize step=any type=number><td>Initial Size (rem)'
+        + '<tr><td><input class=mini id=multiplier step=any type=number><td>Size Multiplier'
         + '<tr><td><input class=mini id=letters type=text><td>Letters'
-        + '<tr><td><input class=mini id=rows min=1 step=1 type=number><td>Rows</table>',
+        + '<tr><td><input class=mini id=rows min=1 step=1 type=number><td>Rows of <input class=mini id=count min=1 step=1 type=number></table>',
       'title': 'EyeChart.htm',
       'ui_elements': [
         'chart',
