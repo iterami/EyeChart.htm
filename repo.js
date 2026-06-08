@@ -3,11 +3,11 @@
 function randomize(){
     let chart = '';
     let fontsize = core_storage_data.fontsize;
-    const min = globalThis.innerWidth / (core_storage_data.count + 1);
+    const max = globalThis.innerWidth / (core_storage_data.count + 1) / (fontsize * 2);
     let line = 1;
 
     for(let row = 0; row < core_storage_data.rows; row++){
-        if(fontsize < min){
+        if(fontsize < max){
             chart += '<tr><td class=big>' + line++ + '<td style="font-size:' + fontsize + 'rem">';
             for(let letter = 0; letter < core_storage_data.count; letter++){
                 chart += core_storage_data.letters[core_random_integer(core_storage_data.letters.length)] + ' ';
